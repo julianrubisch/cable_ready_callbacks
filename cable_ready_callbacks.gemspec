@@ -1,14 +1,14 @@
 require_relative "lib/cable_ready_callbacks/version"
 
 Gem::Specification.new do |spec|
-  spec.name        = "cable_ready_callbacks"
-  spec.version     = CableReadyCallbacks::VERSION
-  spec.authors     = ["Julian Rubisch"]
-  spec.email       = ["julian@julianrubisch.at"]
-  spec.homepage    = "https://github.com/julianrubisch/cable_ready_callbacks"
-  spec.summary     = "Broadcast to your resources effortlessly"
+  spec.name = "cable_ready_callbacks"
+  spec.version = CableReadyCallbacks::VERSION
+  spec.authors = ["Julian Rubisch"]
+  spec.email = ["julian@julianrubisch.at"]
+  spec.homepage = "https://github.com/julianrubisch/cable_ready_callbacks"
+  spec.summary = "Broadcast to your resources effortlessly"
   spec.description = "Broadcast to your resources effortlessly"
-  spec.license     = "MIT"
+  spec.license = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.
