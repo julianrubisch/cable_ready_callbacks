@@ -4,16 +4,16 @@ module CableReadyCallbacks
 
     queue_as :default
 
-    def perform(resource)
+    def perform(resource, operations = nil)
       channel_name = "#{resource.class.name.pluralize}Channel".safe_constantize
 
-      if block_given?
-        yield cable_ready[channel_name]
-      else
+      if operations.nil?
         cable_ready[channel_name].morph(
           selector: dom_id(resource),
           html: ApplicationController.render(resource)
         ).broadcast_to(resource)
+      else
+        cable_ready[channel_name].apply(operations).broadcast_to(resource)
       end
     end
   end
